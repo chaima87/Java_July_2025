@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Date Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body onload="showAlert('Date')">
+<h1>Today's Date</h1>
+<p th:text="${currentDate}"></p>
+</body>
+</html>

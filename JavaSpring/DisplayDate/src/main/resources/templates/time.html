@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body onload="showAlert('Time')">
+<h1>Current Time</h1>
+<p th:text="${currentTime}"></p>
+</body>
+</html>
