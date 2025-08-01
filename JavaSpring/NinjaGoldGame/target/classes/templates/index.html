@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ninja Gold</title>
+    <style>
+        .gain { color: green; }
+        .loss { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Ninja Gold Game</h1>
+    <h2>Gold: <span th:text="${gold}"></span></h2>
+
+    <form th:action="@{/process}" method="post">
+        <input type="hidden" name="location" value="farm"/>
+        <button>Farm</button>
+        <p>(earns 10-20 Gold)</p>
+    </form>
+
+    <form th:action="@{/process}" method="post">
+        <input type="hidden" name="location" value="cave"/>
+        <button>Cave</button>
+        <p>(earns 5-10 Gold)</p>
+    </form>
+
+    <form th:action="@{/process}" method="post">
+        <input type="hidden" name="location" value="house"/>
+        <button>House</button>
+        <p>(earns 2-5 Gold)</p>
+    </form>
+
+    <form th:action="@{/process}" method="post">
+        <input type="hidden" name="location" value="quest"/>
+        <button>Quest</button>
+        <p>(earns 0-50 Gold)</p>
+    </form>
+
+    <form th:action="@{/process}" method="post">
+        <input type="hidden" name="location" value="spa"/>
+        <button>Spa</button>
+        <p>(loss 5-20 Gold)</p>
+    </form>
+
+    <form th:action="@{/reset}" method="get">
+        <button>Reset Game</button>
+    </form>
+
+    <h3>Activities</h3>
+    <ul>
+        <li th:each="entry : ${log}" th:text="${entry}"></li>
+    </ul>
+</body>
+</html>
