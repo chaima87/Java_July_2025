@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Visitor Counter</title>
+</head>
+<body>
+    <h1>Visitor Count: <span th:text="${count}"></span></h1>
+    
+    <form th:action="@{/reset}" method="post">
+        <button type="submit">Reset Counter</button>
+    </form>
+
+    <br>
+    <a href="/">Visit Again (+1)</a> |
+    <a href="/increment-by-2">Increment by 2</a>
+</body>
+</html>
