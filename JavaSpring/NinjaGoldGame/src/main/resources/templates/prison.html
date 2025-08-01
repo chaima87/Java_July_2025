@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Debtors' Prison</title>
+</head>
+<body>
+    <h1>You are in Debtors' Prison!</h1>
+    <p>You went below -100 gold!</p>
+    <form th:action="@{/reset}" method="get">
+        <button>Reset Game</button>
+    </form>
+</body>
+</html>
