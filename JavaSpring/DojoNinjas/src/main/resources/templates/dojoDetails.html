@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Dojo Details</title></head>
+<body>
+    <h1 th:text="${dojo.name}">Dojo Name</h1>
+    <h2>Ninjas:</h2>
+    <ul>
+        <li th:each="ninja : ${dojo.ninjas}" th:text="${ninja.firstName + ' ' + ninja.lastName}"></li>
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>

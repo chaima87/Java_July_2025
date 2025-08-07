@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Create Ninja</title></head>
+<body>
+    <h1>New Ninja</h1>
+    <form th:action="@{/ninjas}" th:object="${ninja}" method="post">
+        First Name: <input type="text" th:field="*{firstName}" /><br>
+        Last Name: <input type="text" th:field="*{lastName}" /><br>
+        Dojo:
+        <select th:field="*{dojo.id}">
+            <option th:each="dojo : ${dojos}" th:value="${dojo.id}" th:text="${dojo.name}"></option>
+        </select><br>
+        <button type="submit">Create</button>
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dojo Dashboard</title>
+</head>
+<body>
+    <h1>All Dojos</h1>
+    <ul>
+        <li th:each="dojo : ${dojos}">
+            <a th:href="@{/dojos/{id}(id=${dojo.id})}" th:text="${dojo.name}">Dojo Name</a>
+        </li>
+    </ul>
+    <a href="/dojos/new">Create Dojo</a> |
+    <a href="/ninjas/new">Create Ninja</a>
+</body>
+</html>

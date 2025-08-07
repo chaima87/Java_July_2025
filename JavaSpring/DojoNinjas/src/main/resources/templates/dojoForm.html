@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Create Dojo</title></head>
+<body>
+    <h1>New Dojo</h1>
+    <form th:action="@{/dojos}" th:object="${dojo}" method="post">
+        Name: <input type="text" th:field="*{name}" /><br>
+        <button type="submit">Create</button>
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>
